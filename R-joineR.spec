@@ -4,20 +4,18 @@
 #
 Name     : R-joineR
 Version  : 1.2.4
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/joineR_1.2.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineR_1.2.4.tar.gz
 Summary  : Joint Modelling of Repeated Measurements and Time-to-Event Data
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-markdown
-Requires: R-statmod
 BuildRequires : R-markdown
 BuildRequires : R-statmod
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
-effects joint models. Fits the joint models proposed by Henderson and colleagues
+# joineR <img src="man/figures/hex.png" width = "175" height = "200" align="right" />
 
 %prep
 %setup -q -c -n joineR
@@ -27,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532212592
+export SOURCE_DATE_EPOCH=1552809203
 
 %install
+export SOURCE_DATE_EPOCH=1552809203
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532212592
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library joineR|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  joineR || :
 
 
 %files
@@ -107,3 +104,10 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/joineR/help/paths.rds
 /usr/lib64/R/library/joineR/html/00Index.html
 /usr/lib64/R/library/joineR/html/R.css
+/usr/lib64/R/library/joineR/tests/testthat.R
+/usr/lib64/R/library/joineR/tests/testthat/Rplots.pdf
+/usr/lib64/R/library/joineR/tests/testthat/test-ancillary.R
+/usr/lib64/R/library/joineR/tests/testthat/test-comprisk.R
+/usr/lib64/R/library/joineR/tests/testthat/test-misc.R
+/usr/lib64/R/library/joineR/tests/testthat/test-models.R
+/usr/lib64/R/library/joineR/tests/testthat/test-plot.R
