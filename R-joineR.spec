@@ -4,13 +4,15 @@
 #
 Name     : R-joineR
 Version  : 1.2.4
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/joineR_1.2.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineR_1.2.4.tar.gz
 Summary  : Joint Modelling of Repeated Measurements and Time-to-Event Data
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-rlang
 BuildRequires : R-markdown
+BuildRequires : R-rlang
 BuildRequires : R-statmod
 BuildRequires : buildreq-R
 
@@ -25,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552809203
+export SOURCE_DATE_EPOCH=1552957820
 
 %install
-export SOURCE_DATE_EPOCH=1552809203
+export SOURCE_DATE_EPOCH=1552957820
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
