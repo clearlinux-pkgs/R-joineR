@@ -4,7 +4,7 @@
 #
 Name     : R-joineR
 Version  : 1.2.5
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/joineR_1.2.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineR_1.2.5.tar.gz
 Summary  : Joint Modelling of Repeated Measurements and Time-to-Event Data
@@ -15,25 +15,26 @@ BuildRequires : R-statmod
 BuildRequires : buildreq-R
 
 %description
-# joineR <img src="man/figures/hex.png" width = "175" height = "200" align="right" />
+effects joint models. Fits the joint models proposed by Henderson and colleagues
 
 %prep
 %setup -q -c -n joineR
+cd %{_builddir}/joineR
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581285907
+export SOURCE_DATE_EPOCH=1589535095
 
 %install
-export SOURCE_DATE_EPOCH=1581285907
+export SOURCE_DATE_EPOCH=1589535095
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
