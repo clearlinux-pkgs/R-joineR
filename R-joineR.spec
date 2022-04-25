@@ -4,7 +4,7 @@
 #
 Name     : R-joineR
 Version  : 1.2.6
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/joineR_1.2.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineR_1.2.6.tar.gz
 Summary  : Joint Modelling of Repeated Measurements and Time-to-Event Data
