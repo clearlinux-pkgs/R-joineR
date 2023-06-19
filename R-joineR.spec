@@ -4,7 +4,7 @@
 #
 Name     : R-joineR
 Version  : 1.2.8
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/joineR_1.2.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineR_1.2.8.tar.gz
 Summary  : Joint Modelling of Repeated Measurements and Time-to-Event Data
